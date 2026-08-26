@@ -5,6 +5,7 @@
    Persistenz: localStorage (Auto-Save) + manueller JSON-Export/Import.
    ================================================================ */
 
+const APP_VERSION = '1.0.0';
 const STORAGE_KEY = 'nis2qc_v1';
 const TOTAL_STEPS = 2 + NIS2_DOMAINS.length;
 
@@ -513,3 +514,5 @@ initTheme();
 loadAutoSave();
 initAnswers();
 render();
+const versionEl = document.getElementById('appVersion');
+if (versionEl) versionEl.textContent = APP_VERSION;
