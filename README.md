@@ -2,66 +2,70 @@
 ![NIS2 Quick-Check Banner](nis2-quickcheck-banner.jpeg)
 # NIS2 Quick-Check
 
-Ein kostenloser, rein clientseitiger Selbst-Check zur groben Einschätzung des eigenen
-Umsetzungsstands gegenüber den zehn Maßnahmenbereichen aus Art. 21(2) der NIS2-Richtlinie.
+A free, fully client-side self-check to get a rough estimate of your implementation status
+against the ten measure areas in Article 21(2) of the NIS2 Directive.
 
-**Eigenständiges Tool** — kein Bestandteil und keine Abhängigkeit von [ISMS Builder](https://github.com/coolstartnow/isms-builder).
-Eine spätere Integration (z. B. als Modul innerhalb des ISMS Builders) ist möglich, aber
-bewusst nicht Teil dieses Standes.
+**🌍 Fully translated into all 24 official EU languages** — every domain, question, help text,
+country entry and UI string. Not just DE/EN — genuinely all 24, with no machine-translation
+fallback.
 
-## Nutzung
+**Standalone tool** — not part of, and not dependent on, [ISMS Builder](https://github.com/coolstartnow/isms-builder).
+A later integration (e.g. as a module inside ISMS Builder) is possible but deliberately not
+part of this release.
 
-Keine Installation, kein Build-Schritt, kein Server nötig — einfach `index.html` im Browser öffnen:
+## Usage
+
+No installation, no build step, no server required — just open `index.html` in a browser:
 
 ```bash
 xdg-open index.html   # Linux
-# oder: open index.html (macOS) / Doppelklick im Explorer (Windows)
+# or: open index.html (macOS) / double-click in Explorer (Windows)
 ```
 
-Alternativ mit einem beliebigen statischen Webserver ausliefern, z. B.:
+Alternatively, serve it with any static web server, e.g.:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-## Funktionsumfang
+## Features
 
-- 10 Domänen × 5 Fragen (50 Fragen gesamt) nach NIS2 Art. 21(2)(a)–(j), Reifegrad-Skala 0–4
-- Automatische grobe Einstufung Essential/Important nach Sektor + Unternehmensgröße
-- Ergebnis-Dashboard: Balkendiagramm, Radar-Diagramm, Gap-Analyse mit Prioritäten
-- Länderinformation zum im Profil gewählten Land: zuständige Behörde, nationales Gesetz, Umsetzungsstand (alle 27 EU-Mitgliedsstaaten hinterlegt)
-- PDF-Export über die Druckfunktion des Browsers (kein separates PDF-Tool nötig)
-- JSON-Export/Import zum Sichern, Teilen und Wiederaufnehmen einer Bewertung
-- Automatisches Zwischenspeichern im Browser (`localStorage`) — nichts geht bei einem Reload verloren
-- Dark Mode
-- Läuft komplett lokal, keine Daten verlassen den Browser, kein Tracking, keine Cloud-Anbindung
+- 10 domains × 5 questions (50 questions total) per NIS2 Art. 21(2)(a)–(j), maturity scale 0–4
+- Automatic rough classification Essential/Important by sector + company size
+- Result dashboard: bar chart, radar chart, gap analysis with priorities
+- Country information for the country selected in your profile: competent authority, national
+  law, transposition status (all 27 EU member states included)
+- PDF export via the browser's print function (no separate PDF tool needed)
+- JSON export/import to save, share, and resume an assessment
+- Automatic browser autosave (`localStorage`) — nothing is lost on reload
+- Dark mode
+- Runs entirely locally — no data ever leaves the browser, no tracking, no cloud connection
 
-## Sprachen
+## Languages
 
-Vollständig übersetzt in alle 24 EU-Amtssprachen: Bulgarisch, Kroatisch, Tschechisch, Dänisch,
-Niederländisch, Englisch, Estnisch, Finnisch, Französisch, Deutsch, Griechisch, Ungarisch,
-Irisch, Italienisch, Lettisch, Litauisch, Maltesisch, Polnisch, Portugiesisch, Rumänisch,
-Slowakisch, Slowenisch, Spanisch, Schwedisch — jede Domäne, Frage, Länderangabe und jeder
-UI-Text (`data.js`, `i18n.js`).
+**Fully translated into all 24 official EU languages**: Bulgarian, Croatian, Czech, Danish,
+Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Irish, Italian, Latvian,
+Lithuanian, Maltese, Polish, Portuguese, Romanian, Slovak, Slovenian, Spanish, Swedish —
+every domain, question, country entry, and UI string (`data.js`, `i18n.js`).
 
-Bewusst kein automatischer Sprachfallback ohne Qualitätskontrolle — sollte künftig eine weitere
-EU-Sprache hinzukommen, greift der in `i18n.js` (`t()`/`tl()`) eingebaute Fallback auf Englisch,
-bis auch sie vollständig übersetzt ist.
+Deliberately no automatic language fallback without quality control — should a further
+language ever be added before it's fully translated, the built-in fallback in `i18n.js`
+(`t()`/`tl()`) falls back to English until translation is complete.
 
-## Wichtiger Hinweis
+## Important note
 
-**Kein Ersatz für Rechtsberatung.** Dieses Tool liefert eine unverbindliche Orientierung.
-Verbindliche Einstufung und Umsetzungspflichten hängen von der jeweiligen nationalen
-Umsetzung der NIS2-Richtlinie ab und ändern sich laufend — bitte vor jeder Entscheidung mit
-der zuständigen nationalen Behörde bzw. einer fachkundigen Beratung abstimmen.
+**Not a substitute for legal advice.** This tool provides non-binding orientation only.
+Binding classification and implementation obligations depend on the respective national
+transposition of the NIS2 Directive and change continuously — please confirm with the
+competent national authority or qualified legal counsel before any decision.
 
-Die Länderdaten (`data.js`, `COUNTRY_DATA`) spiegeln den Stand zum in `COUNTRY_DATA_ASOF`
-genannten Datum wider und sind manuell zu pflegen — es gibt keine automatische Aktualisierung.
+The country data (`data.js`, `COUNTRY_DATA`) reflects the status as of the date named in
+`COUNTRY_DATA_ASOF` and is maintained manually — there is no automatic update.
 
-## Herkunft & Lizenz
+## Origin & license
 
-Unabhängig entwickelt. Die grobe fachliche Struktur (10 NIS2-Domänen, Länderübersicht als
-Konzept) wurde von einem thematisch verwandten, aber unlizenzierten Drittprojekt inspiriert —
-sämtliche Texte, Fragen und Daten wurden eigenständig neu verfasst, kein Code wurde übernommen.
+Developed independently. The rough thematic structure (10 NIS2 domains, country overview as
+a concept) was inspired by a thematically related but unlicensed third-party project — all
+text, questions, and data were written from scratch; no code was reused.
 
 © 2026 Claude Hecker — [AGPL-3.0](LICENSE)
