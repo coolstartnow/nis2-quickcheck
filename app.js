@@ -147,6 +147,11 @@ function render() {
   if (domainIdx >= 0 && domainIdx < NIS2_DOMAINS.length) {
     return renderDomain(NIS2_DOMAINS[domainIdx]);
   }
+  // state.step zeigt hinter die letzte Domäne (z. B. nach "Zu den Ergebnissen"
+  // auf der letzten Fragenseite, oder ein alter, vor diesem Fix gespeicherter
+  // Stand) — in dem Fall gehören wir zu den Ergebnissen, nicht zurück auf die
+  // Startseite. Nur ein wirklich negativer/unbekannter Schritt geht auf Welcome.
+  if (state.step > 1) { state.step = 99; return renderResults(); }
   renderWelcome();
 }
 
@@ -290,7 +295,7 @@ function renderDomain(domain) {
 
       <div class="btn-row">
         <button class="btn btn-secondary" onclick="goStep(${state.step - 1})">${t('back')}</button>
-        <button class="btn btn-primary" onclick="goStep(${state.step + 1})">
+        <button class="btn btn-primary" onclick="goStep(${idx === NIS2_DOMAINS.length - 1 ? 99 : state.step + 1})">
           ${idx === NIS2_DOMAINS.length - 1 ? t('toResults') : t('next')}
         </button>
       </div>
