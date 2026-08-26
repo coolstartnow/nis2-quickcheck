@@ -384,9 +384,6 @@ function renderResults() {
 
       ${country ? renderCountryPanel(country) : ''}
 
-      <h3 class="no-print">${t('countryOverviewAll')}</h3>
-      <div class="no-print">${renderCountryTable()}</div>
-
       <div class="btn-row no-print">
         <button class="btn btn-secondary" onclick="goStep(${1 + NIS2_DOMAINS.length})">${t('backToQuestions')}</button>
         <button class="btn btn-secondary" onclick="exportJson()">${t('exportJsonBtn')}</button>
@@ -492,25 +489,6 @@ function renderCountryPanel(c) {
         ${noteText ? `<tr><th>${t('noteLabel')}</th><td>${escHtml(noteText)}</td></tr>` : ''}
       </table>
     </div>
-  `;
-}
-
-function renderCountryTable() {
-  const rows = Object.entries(COUNTRY_DATA).map(([code, c]) => {
-    const st = STATUS_LABELS[c.status];
-    return `
-      <tr class="${code === state.profile.country ? 'highlight-row' : ''}">
-        <td>${c.flag} ${escHtml(tl(c.name))}</td>
-        <td>${escHtml(c.authority)}</td>
-        <td><span class="status-badge" style="background:${st.color}">${escHtml(tl(st.label))}</span></td>
-      </tr>`;
-  }).join('');
-  return `
-    <table class="country-info-table wide">
-      <thead><tr><th>${t('colCountry')}</th><th>${t('colAuthority')}</th><th>${t('colStatus')}</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table>
-    <p class="muted small">${t('countryDataAsOf')}: ${COUNTRY_DATA_ASOF}. ${t('countryTableFooter')}</p>
   `;
 }
 

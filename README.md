@@ -29,7 +29,7 @@ python3 -m http.server 8080
 - 10 Domänen × 5 Fragen (50 Fragen gesamt) nach NIS2 Art. 21(2)(a)–(j), Reifegrad-Skala 0–4
 - Automatische grobe Einstufung Essential/Important nach Sektor + Unternehmensgröße
 - Ergebnis-Dashboard: Balkendiagramm, Radar-Diagramm, Gap-Analyse mit Prioritäten
-- Länderübersicht: zuständige Behörde, nationales Gesetz, Umsetzungsstand (15 EU-Länder)
+- Länderinformation zum im Profil gewählten Land: zuständige Behörde, nationales Gesetz, Umsetzungsstand (alle 27 EU-Mitgliedsstaaten hinterlegt)
 - PDF-Export über die Druckfunktion des Browsers (kein separates PDF-Tool nötig)
 - JSON-Export/Import zum Sichern, Teilen und Wiederaufnehmen einer Bewertung
 - Automatisches Zwischenspeichern im Browser (`localStorage`) — nichts geht bei einem Reload verloren
@@ -38,13 +38,15 @@ python3 -m http.server 8080
 
 ## Sprachen
 
-Aktuell vollständig übersetzt: Deutsch, Englisch, Französisch, Niederländisch (DE/EN/FR/NL) —
-konsistent mit dem Sprachumfang von ISMS Builder.
+Vollständig übersetzt in alle 24 EU-Amtssprachen: Bulgarisch, Kroatisch, Tschechisch, Dänisch,
+Niederländisch, Englisch, Estnisch, Finnisch, Französisch, Deutsch, Griechisch, Ungarisch,
+Irisch, Italienisch, Lettisch, Litauisch, Maltesisch, Polnisch, Portugiesisch, Rumänisch,
+Slowakisch, Slowenisch, Spanisch, Schwedisch — jede Domäne, Frage, Länderangabe und jeder
+UI-Text (`data.js`, `i18n.js`).
 
-Die Auswahl umfasst technisch alle 24 EU-Amtssprachen (`i18n.js`, `LANGUAGES`), die restlichen
-20 sind als Struktur angelegt, fallen mangels Übersetzung aber automatisch auf Englisch zurück
-(mit sichtbarem Hinweis). Bewusst keine maschinelle Rohübersetzung ohne Qualitätskontrolle —
-weitere Sprachen folgen schrittweise.
+Bewusst kein automatischer Sprachfallback ohne Qualitätskontrolle — sollte künftig eine weitere
+EU-Sprache hinzukommen, greift der in `i18n.js` (`t()`/`tl()`) eingebaute Fallback auf Englisch,
+bis auch sie vollständig übersetzt ist.
 
 ## Wichtiger Hinweis
 
