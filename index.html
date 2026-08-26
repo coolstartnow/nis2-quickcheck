@@ -1,0 +1,38 @@
+<!-- © 2026 Claude Hecker — NIS2 Quick-Check — AGPL-3.0 -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIS2 Quick-Check</title>
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-brand"><img src="favicon.jpeg" alt="" class="brand-icon"> NIS2 Quick-Check</div>
+    <div class="topbar-right">
+      <div id="langSwitcher"></div>
+      <button class="icon-btn" onclick="toggleDarkMode()" title="Dark Mode">🌓</button>
+    </div>
+  </header>
+
+  <div id="langHint" class="lang-hint" style="display:none">
+    ⚠️ <span id="langHintText"></span>
+  </div>
+
+  <div id="progressWrap" class="progress-wrap" style="display:none">
+    <div id="progressBar" class="progress-bar"></div>
+  </div>
+
+  <main id="app"></main>
+
+  <footer class="footer no-print">
+    © 2026 Claude Hecker · <a href="LICENSE" target="_blank">AGPL-3.0</a> · Eigenständiges Tool, kein Backend, keine Cloud-Anbindung.
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
