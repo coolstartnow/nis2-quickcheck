@@ -200,7 +200,7 @@ function renderWelcome() {
       <div class="btn-row">
         <button class="btn btn-primary" onclick="startAssessment()">${t('start')}</button>
         <label class="btn btn-secondary file-btn">
-          ${t('loadSaved')}
+          📂 ${t('loadSaved')}
           <input type="file" accept="application/json" style="display:none" onchange="importJson(this.files[0])" />
         </label>
       </div>
