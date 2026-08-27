@@ -65,6 +65,14 @@ competent national authority or qualified legal counsel before any decision.
 The country data (`data.js`, `COUNTRY_DATA`) reflects the status as of the date named in
 `COUNTRY_DATA_ASOF` and is maintained manually — there is no automatic update.
 
+## Changelog
+
+- **v1.0.1** — Import button ("Load saved assessment") on the welcome screen now has an icon,
+  so it's easier to spot next to the primary "Start" button.
+- **v1.0.0** — Initial release: 10 domains × 5 questions, classification, result dashboard,
+  all 27 EU member states, all 24 official EU languages, JSON export/import, PDF export,
+  autosave, dark mode.
+
 ## Origin & license
 
 Developed independently. The rough thematic structure (10 NIS2 domains, country overview as
