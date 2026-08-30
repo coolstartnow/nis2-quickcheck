@@ -9,6 +9,9 @@ against the ten measure areas in Article 21(2) of the NIS2 Directive.
 country entry and UI string. Not just DE/EN — genuinely all 24, with no machine-translation
 fallback.
 
+📖 **[Wiki](https://github.com/coolstartnow/nis2-quickcheck/wiki)** — Home, FAQ, Methodology,
+Languages & Country Data
+
 > 🔗 **From the same author: [ISMS Builder](https://github.com/coolstartnow/isms-builder)** —
 > a self-hosted, open-source ISMS platform covering ISO 27001, NIS2, GDPR/DSGVO and BSI
 > IT-Grundschutz. This quick-check is a good first step before setting up a full ISMS.
