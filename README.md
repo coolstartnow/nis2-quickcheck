@@ -21,6 +21,9 @@ Languages & Country Data
 
 ## Usage
 
+🚀 **Try it live: https://coolstartnow.github.io/nis2-quickcheck/** — no install needed,
+runs entirely in your browser (see [Features](#features) below).
+
 No installation, no build step, no server required — just open `index.html` in a browser:
 
 ```bash
